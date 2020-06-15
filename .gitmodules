@@ -1,0 +1,9 @@
+[submodule "projects/rgb-colour-game"]
+	path = projects/rgb-colour-game
+	url = gh-personal:jenewland1999/rgb-colour-game.git
+[submodule "projects/patatap-recreation"]
+	path = projects/patatap-recreation
+	url = gh-personal:jenewland1999/patatap-recreation.git
+[submodule "projects/clientside-to-do-list"]
+	path = projects/clientside-to-do-list
+	url = gh-personal:jenewland1999/clientside-to-do-list.git
