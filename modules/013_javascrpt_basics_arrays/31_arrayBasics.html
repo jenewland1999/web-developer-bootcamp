@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Arrays</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Arrays</h1>
+  <script type="text/javascript">
+  
+    // Example array
+    var colleagues = ["Darren", "Jac", "Tanya", "Holly", "Ben", "Carmel", "Mike", "Marcus", "Dan", "Saima", "David", "Andy", "Carolyn", "Owen", "Dana", "Nicole"];
+
+    // creates an array with defined values
+    var dutyManagers = ["Dan", "Kier", "Darren"];
+
+    // Defining arrays
+    var array = [];
+    var arrayDefinedDifferently = new Array();
+
+    // Update an array's value
+    dutyManagers[1] = "Tanya";
+
+    // Add a value to an array (basic)
+    dutyManagers[3] = "Bobby"; 
+
+    // Returns the length of an array 
+    dutyManagers.length // returns 4
+
+    // Adds an element to the end of a array
+    colleagues.push("Desmond"); // returns the length
+
+    // Removes the last element of a array
+    colleagues.pop(); // returns the value it removes
+
+    // Adds an element to the beginning of a array 
+    colleagues.unshift("Connor") // returns the length
+
+    // Removes the first element of a array
+    colleagues.shift() // returns the value it removes
+
+    // Find the index of element in a array
+    colleagues.indexOf("David"); // returns 10
+
+    // indexOf can be used to see if an element is present in an array
+    colleagues.indexOf("Joshua") // returns -1
+
+    // Slice is used to make copies of certain/all entries of an array
+    var teamA = colleagues.slice(0, 5); // copies the first five entries to teamA
+    var teamB = colleagues.slice(6, 11); // copies the 6th to 11th place entries to teamA
+    var teamC = colleagues.slice(12); // copies the remaining entries to teamC
+    var allTeams = colleagues.slice(); // copies the entire colleagues array to allTeams
+  
+  </script>
+</body>
+</html>

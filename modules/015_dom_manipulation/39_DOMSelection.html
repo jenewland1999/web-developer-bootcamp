@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Manipulation: Selection</title>
+  </head>
+  <body>
+    <h1>Hello</h1>
+    <h1>Goodbye</h1>
+    <ul>
+      <li id="special">List Item 1</li>
+      <li class="bolded">List Item 2</li>
+      <li class="bolded">List Item 3</li>
+    </ul>
+    <script>
+      // Element selection using older methods (getElementById/getElementsByClassName/getElementsByTagName)
+      var getElementById = document.getElementById("special");
+      var getElementsByClassName = document.getElementsByClassName("bolded");
+      var getElementsByTagName = document.getElementsByTagName("li");
+
+      // Element selection using newer methods (querySelector/querySelectorAll)
+      var querySelectorID = document.querySelector("#special");
+      var querySelectorClass = document.querySelector(".bolded");
+      var querySelectorTag = document.querySelector("li");
+      var querySelectorAllTag = document.querySelectorAll("h1");
+    </script>
+  </body>
+</html>

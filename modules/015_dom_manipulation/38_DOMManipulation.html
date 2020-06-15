@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DOM Manipulation: Basics</title>
+</head>
+<body>
+  <h1>DOM Manipulation: Basics</h1>
+
+  <script type="text/javascript">
+  
+    var body = document.querySelector("body");
+    var isBlue = false;
+
+    setInterval(function() {
+      if (isBlue) {
+        body.style.background = "#FFF";
+      } else {
+        body.style.background = "aqua"
+      }
+      isBlue = !isBlue;
+    }, 5000);
+  
+  </script>
+</body>
+</html>

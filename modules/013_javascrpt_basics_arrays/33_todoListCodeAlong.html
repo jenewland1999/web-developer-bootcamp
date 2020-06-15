@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Arrays</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Arrays</h1>
+  <p>In this code along, Colt Steele takes us through the process of making a very basic todo list app. It utlises the prompt and console.log methods as well as arrays, loops and so forth.</p>
+
+  <script type="text/javascript">
+  
+    var todos = [];
+    var input = prompt("What would you like to do?");
+
+    while (input !== "quit") {  
+      if (input === "list") {
+        listTodos();
+      } else if (input === "new") {
+        addTodo();
+      } else if (input === "delete") {
+        removeTodo();
+      }
+
+      // Ask again
+      input = prompt("What would you like to do?");
+    }
+
+    function listTodos() {
+      console.log("*********")
+      todos.forEach(function(todo, index) {
+        console.log(index + ": " + todo);
+      });
+      console.log("*********")
+    }
+
+    function addTodo() {
+      var newTodo = prompt("Enter new todo");
+      todos.push(newTodo);
+      console.log("Todo Added");
+    }
+
+    function removeTodo() {
+      var indexInput = prompt("Enter the index of todo to remove from the list");
+      todos.splice(indexInput, 1);
+      console.log("Todo Removed")
+    }
+
+    // When the user quits
+    console.log("Goodbye.");
+  
+  </script>
+</body>
+</html>

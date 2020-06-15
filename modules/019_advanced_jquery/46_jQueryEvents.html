@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Events</title>
+
+  <style type="text/css">
+    .container {
+      width: 32em;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+    .done {
+      text-decoration: line-through;
+      color: rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1 class="old-class-name"><em>jQuery</em> Events</h1>
+
+  <ul>
+    <li><a href="#">This is a link inside of a list item. Click me.</a></li>
+    <li><a href="#">This is a link inside of a list item. Click me.</a></li>
+    <li><a href="#" title="this link has a title">This is a link inside of a list item. Click me.</a></li>
+    <li><a href="#">This is a link inside of a list item. Click me.</a></li>
+    <li><a href="#" title="this link has a title too">This is a link inside of a list item. Click me.</a></li>
+  </ul>
+
+  <div class="container">
+    <img src="https://placehold.it/256" alt="Placeholder Image 256x256 Pixels. This image was sourced from www.placehold.it">
+    <img src="https://placehold.it/256" alt="Placeholder Image 256x256 Pixels. This image was sourced from www.placehold.it">
+    <img src="https://placehold.it/256" alt="Placeholder Image 256x256 Pixels. This image was sourced from www.placehold.it">
+  </div>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae distinctio, repellendus, ea quos ut neque cumque odio <span id="reference">ullam quaerat</span> accusantium dignissimos temporibus nobis quia qui hic? Sed beatae velit <strong>perspiciatis, nulla maiores inventore est iste</strong> eligendi expedita minima nemo aliquam rerum dolor dignissimos, quis totam corrupti consectetur ducimus accusantium. Quidem!</p>
+
+  <p>Lorem ipsum dolor sit nostrum et? Pariatur soluta quae esse qui facilis incidunt sequi, minus recusandae cumque numquam accusamus quasi, quam laborum iure consectetur fugit velit doloribus atque? Enim perspiciatis laudantium magni tempore eos soluta delectus alias deleniti tempora. Consectetur hic excepturi reiciendis alias laudantium doloribus vero mollitia, harum accusamus libero quod asperiores velit numquam obcaecati soluta voluptas, deleniti placeat culpa qui doloremque dolore provident at. Quaerat commodi harum corrupti consectetur voluptatum consequatur.</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, iure. Dolorum fugiat ad harum accusantium totam at in est sed beatae optio laudantium aliquid deserunt unde veniam velit, perferendis labore adipisci soluta quas animi minus! Eaque distinctio tempore accusantium expedita nulla quos quasi repellat veritatis, velit, sit voluptatem, libero dolores.</p>
+
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur eveniet a molestias eius atque dolorum sit aperiam ipsam, quibusdam ullam cumque et, quisquam debitis incidunt earum cupiditate sint aliquid. Commodi reiciendis inventore, nostrum minus in recusandae. Laborum accusantium nostrum at perferendis ullam ex ducimus, neque dignissimos amet eveniet, corrupti cumque officia explicabo tempore eum sint consequuntur odio asperiores sit reprehenderit culpa provident? Fuga expedita pariatur sed libero tenetur ipsam natus rem eius ullam laboriosam officia nobis temporibus autem quibusdam, ipsum minima repellat cum. Assumenda placeat velit explicabo veritatis voluptatem hic quaerat maxime consectetur, deleniti quasi eos ducimus quod accusantium suscipit?</p>
+
+  <input type="text" placeholder="Enter Todo">
+
+  <ul class="todos">
+    <li class="todo">Feed Cat</li>
+  </ul>
+
+  <script type="text/javascript" src="lib/jQuery-3.2.1.bundle.js"></script>
+  <script type="text/javascript">
+  
+    $("img").click(function() {
+      alert("You clicked an image");
+    });
+
+    // Not safe from XSS (Cross-Site Scripting) - DEMO ONLY!!!!
+    $("input").keypress(function(e) {
+      console.log(e.which);
+      if (e.which === 13) {
+        var prevHtml = $("ul.todos").html()
+        var newHtml = prevHtml += "<li class=\"todo\">" + $(this).val() + "</li>";
+        $("ul.todos").html(newHtml);
+      }
+    });
+
+    // Note: .on("click") and .click() are different in that on will add event listeners to any elements that might appear on the page in the future whereas click only adds event listeners to elements currently present. 
+    $("h1").on("click", function(){
+      $(this).css("color", "purple");
+    });
+  
+  </script>
+</body>
+</html>

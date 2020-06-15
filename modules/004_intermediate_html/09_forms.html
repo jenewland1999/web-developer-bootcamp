@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Forms</title>
+</head>
+<body>
+  <!-- Basic form; container for all form elements e.g. buttons and inputs - default method is GET -->
+  <form action="/my-form-submitting-page" method="POST">
+    <!-- Inputs and/or Buttons -->
+  </form>
+
+  <div>
+    
+    <!-- Various Input Types. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_<input>_types for all types -->
+    <h3>Various Input Types</h3>
+
+    <!-- Regular Text -->
+    <div>
+      <input type="text">
+    </div>
+  
+    <!-- Date -->
+    <div>
+      <input type="date">
+    </div>
+  
+    <!-- Colour -->
+    <div>
+      <input type="color">
+    </div>
+  
+    <!-- File -->
+    <div>
+      <input type="file">
+    </div>
+  
+    <!-- Checkbox -->
+    <div>
+      <input type="checkbox">
+    </div>
+  </div>
+
+  <h3>Using Forms to Group Inputs &amp; Show examples of <em>placeholder</em> and <em>name</em> attributes</h3>
+
+  <form>
+    <input name="username" type="email" placeholder="Email">
+    <input name="password" type="password" placeholder="Password">
+    <input type="submit">
+  </form>
+
+  <h3>Labels: Nested vs for/id Method</h3>
+
+  <!-- Labels -->
+  <label>
+    Username: 
+    <input type="text">
+  </label>
+  <label>
+    Password: 
+    <input type="password">
+  </label>
+
+  <label for="username">Username:</label>
+  <input type="text" id="username">
+  <label for="password">Password:</label>
+  <input type="password" id="password">
+
+  <h3>Simple Form Validation</h3>
+  <form action="#" method="POST">
+    <label for="EmailAddress">Email Address: </label>
+    <input type="email" name="EmailAddress" id="EmailAddress" required>
+    <label for="Password">Password: </label>
+    <input type="password" name="Password" id="Password" required>
+    <input type="submit" value="Login">
+  </form>
+</body>
+</html>

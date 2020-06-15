@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Arrays</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Arrays</h1>
+  <p>This document covers the arrays problem lecture in which Colt Steele has asked us to create solutions to problems that he has thought up. Using what I've already learnt, as well as perhaps having to research a thing or two, I will complete the tasks then list Colt Steele's solution to the problem.</p>
+
+  <script type="text/javascript">
+  
+    var nums = [1, 2, 3, 4, 5, 6, 7, 1, 10, 35, 23, 5, 5, 5, 46, 43];
+    var numsAlt = [1, 1, 1, 1, 1];
+
+    function printReverse(arr) {
+      var reversedArr = arr.slice().reverse();
+      reversedArr.forEach(function(arrItem) {
+        console.log(arrItem);
+      });
+    }
+
+    function printReverseSolution(arr) {
+      for (var i = arr.length -1; i >= 0; i--) {
+        console.log(i);
+      }
+    }
+
+    function isUniform(arr) {
+      var firstItem = arr[0];
+      var result = false;
+      arr.forEach(function(arrItem) {
+        if (arrItem === firstItem) {
+          result = true;
+        } else {
+          result = false;
+        }
+      })
+      return result;
+    }
+
+    function isUniformSolution(arr) {
+      var firstItem = arr[0];
+      for(var i = 1; i < arr.length; i++) {
+        if (arr[i] !== firstItem) {
+          return false
+        }
+      }
+      return true;
+    }
+
+    function sumArray(arr) {
+      var result = 0;
+      arr.forEach(function(arrItem) {
+        result += arrItem;
+      })
+      console.log(result);
+    }
+
+    function sumArraySolution(arr) {
+      // correct :D 
+    }
+
+    function max(arr) {
+      var topResult = arr[0];
+      arr.forEach(function(arrItem) {
+        if (arrItem > topResult) {
+          topResult = arrItem;
+        }
+      });
+      console.log(topResult);
+    }
+
+    function maxSolution(arr) {
+      // correct :D 
+    }
+  
+  </script>
+</body>
+</html>

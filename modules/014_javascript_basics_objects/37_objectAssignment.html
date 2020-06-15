@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Objects</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Objects</h1>
+  <p>Colt Steele has given us another assignment. This assignment focuses on Objects, the advanced data structure in JavaScript. Below is the completed assignment.</p>
+
+  <script type="text/javascript">
+  
+    var movies = [
+      {
+        name: "The Avengers",
+        rating: 5,
+        hasWatched: true
+      },
+      {
+        name: "Dunkirk",
+        rating: 3.5,
+        hasWatched: false
+      },
+      {
+        name: "Geo Storm",
+        rating: 2.5,
+        hasWatched: false
+      }
+    ]
+
+    // ES5 Method
+    movies.forEach(function(movie) {
+      if (movie.hasWatched) {
+        console.log("You have watched \"" + movie.name + "\" - " + movie.rating + " stars");
+      } else {
+        console.log("You have not watched \"" + movie.name + "\" - " + movie.rating + " stars");
+      }
+    });
+
+    console.log("\n**************\n\n")
+
+    // ES6 Method (Template Strings)
+    movies.forEach(function(movie) {
+      if (movie.hasWatched) {
+        console.log(`You have watched "${movie.name}" - ${movie.rating} stars`);
+      } else {
+        console.log(`You have not watched "${movie.name}" - ${movie.rating} stars`);
+      }
+    });
+  
+  </script>
+</body>
+</html>

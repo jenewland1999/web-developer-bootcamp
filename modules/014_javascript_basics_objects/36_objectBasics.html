@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Objects</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Objects</h1>
+  <p>In this document, we'll cover Objects. This is the most advanced data structure in JavaScript. The object is created by using curly braces, inside of which contains key value pairs "key: value". Objects can include any other data type or data structure including themselves and are also able to function outside of JavaScript using the derived syntax of JSON (JavaScript Object Notation).</p>
+
+  <script type="text/javascript">
+  
+    // An example object
+    var person = {
+      name: "John",
+      age: 20,
+      city: "Plymouth"
+    }
+
+    // Defining an object
+    var object = new Object();
+    var objectAlt = {};
+
+    // Retrieving information from an object
+    // + Use variables e.g. var x = "name"; console.log(person[x]);
+    console.log(person["name"]);
+
+    // - This method doesn't work for property names that have spaces or begin with a number
+    console.log(person.name);
+  
+  </script>
+</body>
+</html>

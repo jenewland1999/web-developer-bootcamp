@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdowns and Radio Buttons</title>
+</head>
+<body>
+  <h3>About Me</h3>
+  <form>
+    
+    <div style="display:block;">
+      <label for="genderMale">Male </label>
+      <input type="radio" value="Male" name="genderChoice" id="genderMale">
+    </div>
+    
+    <div style="display:block;">
+      <label for="genderFemale">Female </label>
+      <input type="radio" value="Female" name="genderChoice" id="genderFemale">
+    </div>
+    
+    <div style="display:block;margin-bottom:1rem;">
+      <label for="genderOther">Other </label>
+      <input type="radio" value="Other" name="genderChoice" id="genderOther">
+    </div>
+    
+    <select style="display:block;margin-bottom:1rem;" name="PrefferredColor" id="PreferredColor">
+      <option value="Red">Red</option>
+      <option value="Green">Green</option>
+      <option value="Blue">Blue</option>
+    </select>
+
+    <label for="bio">Bio:</label>
+    <textarea style="display:block;margin-bottom:1rem;" name="bio" id="bio" cols="30" rows="10"></textarea>
+
+    <button>Submit</button>
+  </form>
+
+
+</body>
+</html>

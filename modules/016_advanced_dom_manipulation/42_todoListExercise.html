@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Todo List</title>
+  <style>
+    .completed {
+      text-decoration: line-through;
+    }
+    .hover {
+      box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    }
+    html {
+      height: 100%;
+    }
+    body {
+      box-sizing: border-box;
+      height: 100%;
+      width: 68em;
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 0 1em;
+      color: #333;
+      font-family: 'Proxima Nova';
+    }
+    h1 {
+      margin-top: 0;
+      padding-left: 40px;
+    }
+    ul {
+      font-size: 1.25rem;
+      margin: 0;
+    }
+    ul li {
+      padding: 1em;
+      margin-bottom: 0.5em;
+      border-radius: 0.25em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo List</h1>
+  <ul>
+    <li>Email Mum I want a cup of tea</li>
+    <li>Listen to music</li>
+    <li>Buy kittens</li>
+    <li>Eat takeaway</li>
+    <li>Drink tea</li>
+  </ul>
+
+  <script type="text/javascript">
+  
+    var todoListElement = document.querySelector("ul");
+    var todoListItems = todoListElement.children;
+
+    for (let i = 0; i < todoListItems.length; i++) {
+      todoListItems[i].addEventListener("mouseover", function() {
+        this.classList.add("hover");
+      });
+      todoListItems[i].addEventListener("mouseout", function() {
+        this.classList.remove("hover");
+      });
+      todoListItems[i].addEventListener("click", function() {
+        this.classList.toggle("completed");
+      });
+    }
+  
+  </script>
+</body>
+</html>

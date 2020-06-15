@@ -1,0 +1,51 @@
+/* 
+  Colours:
+  Border: #bdc3c7
+  Date: #3498db
+  Heading: #2c3e50
+*/
+
+/* Default styles */
+body {
+  padding: 0;
+  font-family: Source Sans Pro, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#feed {
+  max-width: 768px;
+  width: 80%;
+  margin: 1em auto;
+  border: 1.5em solid #bdc3c7;
+  padding: 1.5em;
+}
+
+#feed .post {
+  border-bottom: 1px solid #f1f1f1;
+  margin: 0 0 1.5em;
+}
+
+#feed .post:last-of-type {
+  border-bottom: none;
+  margin: 0;
+}
+
+#feed .post .post-timestamp {
+  margin: 0;
+  color: #3498db;
+  font-size: 1em;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+#feed .post .post-title {
+  color: #2c3850;
+  font-size: 2em;
+}
+
+#feed .post section blockquote {
+  margin-left: 0;
+  padding-left: 0.5em;
+  border-left: 6px solid #bdc3c7;
+}

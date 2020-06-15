@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Basics: Control Flow</title>
+  </head>
+  <body>
+    <h1>JavaScript Basics: Control Flow</h1>
+    <p>In this document we will look at loops. The first loop is the <strong>while</strong> loop. This loop takes a condition and runs until the condition is met. We also look at <strong>Do While</strong> loops. These are almost identical to <strong>While</strong> loops, but have one key difference. The <strong>Do While</strong> loop runs at least once before checking the condition - which is represented in the code as the condition is placed at the end of the statement as shown below.</p>
+    <script type="text/javascript">
+      
+      console.log("1. Print all numbers between -10 and 19");
+
+      var num = -10;
+
+      while (num <= 19) {
+        console.log(num);
+        num++;
+      }
+
+      console.log("2. Print all even numbers between 10 and 40");
+
+      var num2 = 10;
+
+      while (num2 <= 40) {
+        if (num2 % 2 === 0) {
+          console.log(num2);
+        }
+        num2++;
+      }
+
+      console.log("3. Print all odd numbers between 300 and 333");
+
+      var num3 = 300;
+
+      while (num3 <= 333) {
+        if (num3 % 2 !== 0) {
+          console.log(num3);
+        }
+        num3++;
+      }
+
+      console.log("4. Print all numbers divisible by 3 AND 5 between 5 and 50");
+
+      var num4 = 5;
+
+      while (num4 <= 50) {
+        if ((num4 % 3 === 0) && (num4 % 5 === 0)) {
+          console.log(num4);
+        }
+        num4++;
+      }
+    
+      // This is an example of a do while loop. As you can see the condition is already false, but if you run the code in the console you'll see that it will still run once. 
+      var x = 10;
+
+      do {
+        console.log("The value for \"x\" is " + x);
+      } while (x < 10)
+      
+    </script>
+  </body>
+</html>

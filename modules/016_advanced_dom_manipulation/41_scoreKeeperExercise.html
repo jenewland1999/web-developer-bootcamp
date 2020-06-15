@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Score Keeper</title>
+  <style>
+    .hasWon {
+      color: limegreen;
+    }
+  </style>
+</head>
+<body>
+  <h1>Score Keeper</h1>
+  <hr>
+  <h2 id="score"><span id="player1Score">0</span> to <span id="player2Score">0</span></h2>
+  <p>Playing to <span id="objective"></span></p>
+  <input type="number" min="0" max="255">
+  <button id="incrementPlayer1">Player One</button>
+  <button id="incrementPlayer2">Player Two</button>
+  <button id="reset">Reset</button>
+  
+  <script type="text/javascript">
+  
+    var p1Display = document.getElementById("player1Score");
+    var p2Display = document.getElementById("player2Score");
+    var objectiveDisplay = document.getElementById("objective");
+    var p1Btn = document.getElementById("incrementPlayer1");
+    var p2Btn = document.getElementById("incrementPlayer2");
+    var resetBtn = document.getElementById("reset");
+    var objInput = document.querySelector("input[type=\"number\"");
+    var score = {
+      p1: 0,
+      p2: 0,
+      objective: 5
+    }
+    var gameOver = false;
+
+    objectiveDisplay.textContent = score.objective;
+    objInput.value = score.objective;
+
+    p1Btn.addEventListener("click", function() {
+      if (!gameOver) {
+        score.p1++
+        if (score.p1 === score.objective) {
+          p1Display.classList.add("hasWon");
+          gameOver = true;
+        }
+        p1Display.textContent = score.p1;
+      }
+    });
+
+    p2Btn.addEventListener("click", function() {
+      if (!gameOver) {
+        score.p2++
+        if (score.p2 === score.objective) {
+          p2Display.classList.add("hasWon");
+          gameOver = true;
+        }
+        p2Display.textContent = score.p2;
+      }
+    });
+
+    resetBtn.addEventListener("click", function() {
+      resetGame();
+    });
+
+    objInput.addEventListener("change", function() {
+      var newScore = Number(this.value);
+      score.objective = newScore;
+      objectiveDisplay.textContent = newScore;
+      resetGame();
+    });
+
+    function resetGame() {
+      p1Display.textContent = "0";
+      p2Display.textContent = "0";
+      p1Display.classList.remove("hasWon")
+      p2Display.classList.remove("hasWon")
+      score.p1 = 0;
+      score.p2 = 0;
+      gameOver = false;
+    }
+  
+  </script>
+</body>
+</html>

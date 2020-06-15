@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Color Toggle Exercise</title>
+  <style>
+    .purple {
+      background-color: purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>Color Toggle Exercise</h1>
+  <button id="btnColorChanger">Click me to change the color!</button>
+  
+  <script type="text/javascript">
+  
+    // var btn = document.getElementById("btnColorChanger");
+    // var body = document.body;
+
+    // btn.addEventListener("click", function() {
+    //   if (body.style.background === "purple") {
+    //     body.style.background = "white";
+    //   } else {
+    //     body.style.background = "purple";
+    //   }
+    // });
+
+    // var button = document.getElementById("btnColorChanger");
+    // var body = document.body;
+    // var isPurple = false;
+
+    // button.addEventListener("click", function() {
+    //   if (isPurple) {
+    //     body.style.background = "white";
+    //   } else {
+    //     body.style.background = "purple";
+    //   }
+    //   isPurple = !isPurple;
+    // });
+
+    var button = document.querySelector("#btnColorChanger");
+
+    button.addEventListener("click", function() {
+      document.body.classList.toggle("purple");
+    });
+  
+  </script>
+</body>
+</html>

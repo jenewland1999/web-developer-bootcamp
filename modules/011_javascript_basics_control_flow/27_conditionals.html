@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Control Flow</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Control Flow</h1>
+  <p>This document talks about If, Else If and Else Statements. These are known as conditional statements in programming and are found in nearly every language in some form or another.</p>
+  
+  <script type="text/javascript">
+  
+    /* 
+      if (true) {
+        // If Statement
+      }
+
+      else if (false) {
+        // Else If Statement
+      }
+
+      else {
+        // Else Statement
+      }
+     */
+
+    // Ask the user for their age, convert it to a number and store it in variable age.
+    var age = Number(prompt("How old are you?"));
+
+    // Check for negative age
+    if (age < 0) {
+      console.log("Who you trying to fool here? You can't be less than 0 years old");
+    }
+
+    // Check if age exactly equal to 21
+    if (age === 21) {
+      console.log("Happy 21st Birthday!");
+    }
+
+    // Check if age is odd
+    if (age % 2 !== 0) {
+      console.log("Your age is odd!");
+    }
+
+    // Check if age is a perfect square/square number
+    if (age % Math.sqrt(age) === 0) {
+      console.log("Your age is a perfect square!");
+    }
+
+    /* When I attempted this challenge I did the following - My attempt could've been improved by first converting the input to a number so that I wouldn't have to type check and number check it. Furthermore, I had nested if statements which was incorrect as I wasn't checking for multiple conditions only each of them separately and because of this it caused issues with ordering it. Finally, I failed to remember to comment my code which is bad practice as always. */
+
+    /* 
+      var age = prompt("How old are you?");
+      var sqrtCalc = Math.sqrt(age) * Math.sqrt(age) == age;
+
+      if (age !== null && !(isNaN(age))) {
+        if (age <= 0) {
+          console.log("NEGATIVE AGE (INVALID)");
+        } else if (sqrtCalc) {
+          console.log("PERFECT SQUARE");
+        } else if ((age % 2) === 0) {
+          console.log("ODD");
+        } else {
+          console.log("ANY OTHER AGE");
+        }
+      }
+    */
+
+  </script>
+</body>
+</html>

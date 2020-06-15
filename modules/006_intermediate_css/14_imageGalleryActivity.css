@@ -1,0 +1,52 @@
+/* Set some defualt styles */
+body {
+  margin: 0;
+  font-family: Raleway, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  margin-left: 1.66%;
+  margin-right: 1.66%;
+  border-bottom: 2px solid #f1f1f1;
+  padding-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: 800;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Clearfix Hack */
+#gallery:before,
+#gallery:after {
+  content: ' ';
+  display: table;
+  /* Internet Explorer 8/9 fix for clearfix fix */
+  zoom: 1;
+}
+
+#gallery:after {
+  clear: both;
+}
+
+#gallery figure {
+  display: block;
+  margin: 1.66%;
+}
+
+#gallery figure img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive for laptop and larger - Mobile first approach */
+@media screen and (min-width: 750px) {
+  h1 {
+    width: 30%;
+  }
+
+  #gallery figure {
+    width: 30%;
+    float: left;
+  }
+}

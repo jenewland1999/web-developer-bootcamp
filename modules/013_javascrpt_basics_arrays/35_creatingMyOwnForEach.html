@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Arrays</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Arrays</h1>
+  <p>In this extension task, Colt Steele takes us over how we would go about creating our own version of the forEach method built into Arrays.</p>
+
+  <script type="text/javascript">
+  
+  // The standard forEach method built into JavaScript
+  var colors = ["red", "green", "blue"];
+  
+  colors.forEach(function(color){
+    console.log(color);
+  });
+  
+  // Custom for each loop
+  var colors = ["cyan", "magenta", "yellow", "key (black)"];
+  myForEach(colors, console.log);
+
+  function myForEach(arr, func) {
+    for (var i = 0; i < arr.length; i++) {
+      func(arr[i]);
+    }
+  }
+  
+  </script>
+</body>
+</html>

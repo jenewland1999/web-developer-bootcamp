@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Arrays</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Arrays</h1>
+  <p>In this document, we will cover array iteration. This will cover the two main ways you can iterate through the data within an array.</p>
+
+  <script type="text/javascript">
+  
+    var colours = ["red", "green", "blue", "orange", "purple", "lime", "magenta"];
+
+    console.log("For Loop Method:")
+
+    for (var i = 0; i < colours.length; i++) {
+      // Do something here e.g.
+      console.log(colours[i]);
+    }
+
+    console.log("\nforEach Method:");
+
+    colours.forEach(function(color) {
+      // Do something e.g.
+      console.log(color);
+    });
+  
+  </script>
+</body>
+</html>

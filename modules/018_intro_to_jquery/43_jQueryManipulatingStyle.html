@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Manipulating Style</title>
+</head>
+<body>
+  <h1>jQuery Manipulating Style</h1>
+
+  <ul>
+    <li class="active">This is a list item.</li>
+    <li>This is a list item.</li>
+    <li>This is a list item.</li>
+  </ul>
+
+  <button id="reset">Reset</button>
+
+  <script src="lib/jQuery-3.2.1.bundle.js"></script>
+  <script>
+    var style = {
+      margin: 0,
+      color: "#33FFAA",
+      fontSize: "6em",
+      fontFamily: "'Proxima Nova', sans-serif",
+      fontWeight: 400,
+      textAlign: "center",
+      textTransform: "uppercase"
+    }
+
+    var containerStyle = {
+      margin: 0,
+      width: "68em",
+      maxWidth: "90%",
+      marginLeft: "auto",
+      marginRight: "auto",
+      paddingLeft: "1em",
+      paddingRight: "1em",
+    }
+
+    $("h1").css(style);
+    $("body").css(containerStyle);
+  </script>
+</body>
+</html>

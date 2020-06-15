@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Basics: Functions</title>
+</head>
+<body>
+  <h1>JavaScript Basics: Functions</h1>
+  <p>Here, we will learn about JavaScript functions. Functions are one of the most, if not the most, fundemental part to programming. They help to DRY (Don't Repeat Yourself) up your code and organise it.</p>
+  <script type="text/javascript">
+  
+    function isEven(x) {
+      return x % 2 === 0
+    }
+
+    /* Over-complicated my method as per usual. Cole's method is shorter as there's no need to check for the edge case that is 0! = 1 */
+
+    // function factorial(x) {
+    //   if (x === 0) {
+    //     return 1;
+    //   }
+
+    //   var store = x;
+    //   for (var i = x - 1; i >= 1; i--) {
+    //     store *= i
+    //   }
+
+    //   return store;
+    // }
+
+    function factorial(x) {
+      var result = 1;
+
+      for (var i = 2; i <= x; i++) {
+        result *= i;
+      }
+      
+      return result;
+    }
+
+    /* My solution to replacing all hyphens in a string with underscores */
+    function kebabToSnake(x) {
+      while (x.indexOf("-") !== -1) {
+        x = x.replace("-", "_");
+      }
+      return x; 
+    }
+
+    /* Another solution to replacing all hyphens in a string with underscores.*/
+    function kebabToSnakeAlt(x) {
+      var y = x.replace(/-/g, "_");
+      return y;
+    }
+
+    /* The alternative solution to this problem utilises Regular Expressions a more advanced way of handling string manipulation. My solution utilises topics we have covered so far. */
+  
+  </script>
+</body>
+</html>
